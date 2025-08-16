@@ -1,5 +1,6 @@
 package com.felipe.cadastro_usuario.business;
 
+import com.felipe.cadastro_usuario.business.exceptions.UsuarioNaoEncontradoException;
 import com.felipe.cadastro_usuario.infrastructure.entities.Usuario;
 import com.felipe.cadastro_usuario.infrastructure.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class UsuarioService {
     public Usuario buscarUsuarioPorEmail(String email){
 
         return repository.findByEmail(email).orElseThrow(
-                () -> new RuntimeException("Email não encontrado")
+                () -> new UsuarioNaoEncontradoException("Email não encontrado: " + email)
         );
     }
 
