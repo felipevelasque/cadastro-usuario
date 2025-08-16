@@ -1,6 +1,6 @@
 package com.felipe.cadastro_usuario.business;
 
-import com.felipe.cadastro_usuario.infrastructure.entitys.Usuario;
+import com.felipe.cadastro_usuario.infrastructure.entities.Usuario;
 import com.felipe.cadastro_usuario.infrastructure.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
